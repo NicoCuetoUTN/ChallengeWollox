@@ -114,6 +114,15 @@ a.nav-link {
   justify-content: center;
   align-items: center;
 }
+.text-follow{
+  font-size: 50px; 
+  font-family: 'MonserratBold';
+}
+
+.text-wollow{
+  color: white; 
+  font-size: 25px;
+}
 
 .woloxers-container {
   justify-content: center;
@@ -342,6 +351,15 @@ hr.custom {
     width: 100%;
     height: 260px;
   }
+  .text-follow{
+    font-size: 35px; 
+    font-family: 'MonserratBold';
+  }
+  
+  .text-wollow{
+    color: white; 
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 321px) {
@@ -354,5 +372,15 @@ hr.custom {
   .follow-container {
     width: 100%;
     height: 200px;
+  }
+
+  .text-follow{
+    font-size: 25px; 
+    font-family: 'MonserratBold';
+  }
+  
+  .text-wollow{
+    color: white; 
+    font-size: 10px;
   }
 }
