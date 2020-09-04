@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
 
   private validateCredencials(){
     let isValid = true;
-
+    // Podriamos validar con Regex para ser mas optimo tambien
     if (!this.email || !this.email.includes('@')) {
       // this.errors.email = 'USUARIO_VACIO';
       isValid = false;

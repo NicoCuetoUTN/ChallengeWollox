@@ -6,19 +6,19 @@
         <div class="logo"></div>
         <nav class="nav">
           <div class="nav-items">
-            <a href="#" class="nav-link">Inicio</a>
-            <a href="#" class="nav-link">Tecnologias</a>
-            <a href="#" class="nav-link">Beneficios</a>
-            <a href="#" class="nav-link">Requerimientos</a>
+            <a href="#seccionStart" class="nav-link">Inicio</a>
+            <a href="#seccionTechnologies" class="nav-link">Tecnologias</a>
+            <a href="#seccionfollow" class="nav-link">Beneficios</a>
+            <a href="#seccionKnowMore" class="nav-link">Requerimientos</a>
           </div>
           <!-- login -->
-          <button class="login-btn" routerLink="/Login">Login</button>
+          <button *ngIf="!userService.isLoggedIn()" class="login-btn" routerLink="/Login">Login</button>
       </nav>
   </header>
   <!-- seccion principal -->
 
   <!-- 1 -->
-  <section class="wraper-inicio">
+  <section id="seccionStart" class="wraper-inicio">
     <!-- 1:2 -->
     <div class="inicio-container">
       <span>Bienvenido a tu <span style="font-family: 'MonserratBold'; margin-top: 50px;">Entrevista Técnica</span> en
@@ -32,7 +32,7 @@
   </section>
 
   <!-- 2 -->
-  <section class="wrapper-technologies">
+  <section id="seccionTechnologies" class="wrapper-technologies">
     <!-- 1:2 -->
     <div class="text-container">
       <span style="font-size: 35px;">Estamos buscando para incorporar gente increible para estas tecnologias:</span>
@@ -44,7 +44,7 @@
   </section>
 
   <!-- 3 -->
-  <section class="wrapper-follow">
+  <section id="seccionfollow" class="wrapper-follow">
     <!-- 1:2 -->
     <!-- imagen falta el boton / texto /icono -->
     <div class="follow-container">
@@ -56,10 +56,10 @@
         </div>
         <div class="follow-img-container">
           <img src="../../../assets/landing-page/twitter-48.png" class="follow-img"><span
-            style="color: white; font-size: 14px;"> @Wolox</span>
+            style="color: white; font-size: 20px;"> @Wolox</span>
         </div>
         <div class="follow-us-container">
-          <button class="outline-btn">Siguenos</button>
+          <button (click)="gotoExternalUrl('https://twitter.com/Wolox')" class="outline-btn">Siguenos</button>
         </div>
       </div>
 
@@ -74,7 +74,7 @@
   </section>
 
   <!-- 4 -->
-  <section class="wrapper-beneficios">
+  <section id="seccionBenefits" class="wrapper-beneficios">
     <h1 style="text-align: center;">Entre los beneficios que ofrecemos se encuentran <span
         style="color: #359dcb">;)</span></h1>
     <div class="beneficios-container">
@@ -109,7 +109,7 @@
   <!-- divisor -->
   <hr class="custom">
   <!-- 5 -->
-  <section class="wrapper-requirements">
+  <section id="seccionRequirements" class="wrapper-requirements">
     <!-- 1:2 -->
     <div class="requirement-text">
       <h1 style="font-family: 'MonserratBold';">Requerimientos</h1>
@@ -129,14 +129,14 @@
   </section>
 
   <!-- 5 -->
-  <section class="wrapper-know-more">
+  <section id="seccionKnowMore" class="wrapper-know-more">
     <div class="item">
       <div class="content" style="align-self: center;">
         <span style="font-size: 38px; font-family: 'MonserratBold'; display: block; margin-bottom: 10px;">Gracias por
           <span style="color: #359dcb">completar el ejercicio</span></span>
         <span style="font-size: 26px; display: block; margin-top: 10px; margin-bottom: 30px;">Te invitamos a ver mas
           informacion</span>
-        <button class="knowMore-btn">Conocer mas</button>
+        <button (click)="gotoExternalUrl('https://www.wolox.com.ar/')" class="knowMore-btn">Conocer mas</button>
       </div>
     </div>
   </section>
