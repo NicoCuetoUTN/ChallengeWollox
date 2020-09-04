@@ -1,0 +1,346 @@
+.wrapper {
+  width: 100%;
+  max-width: 1355px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 160px;
+  background-image: url('../../../assets/landing-page/Bg_Header.png');
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 200px;
+  height: 160px;
+  background: url(../../../assets/landing-page/logo_full_color.svg);
+  background-size: 200px 160px;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+
+a.nav-link {
+  color: #303a3e;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'MonserratBold';
+  text-align: left;
+  margin-right: 1rem;
+}
+
+.login-btn {
+  color: #359dcb;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #FFF;
+  border-radius: 20px;
+  padding: 10px 60px;
+  border: 2px solid #359dcb;
+}
+
+.wraper-inicio {
+  display: flex;
+  justify-content: space-around;
+  background-image: url('../../../assets/landing-page/Bg_Header.png');
+}
+
+.inicio-container {
+  width: 50%;
+  font-size: 53px;
+  white-space: normal;
+}
+
+.inicio-img-container {
+  justify-content: center;
+  display: flex;
+  width: 50%;
+}
+
+.inicio-img {
+  max-width: 100%;
+  height: auto;
+  transform: scale(-1, 1);
+}
+
+.wrapper-technologies {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.text-container {
+  width: 50%;
+  padding: 0 165px;
+}
+
+.technologies-container {
+  width: 50%;
+}
+
+.technologies-img {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1.25rem;
+}
+
+.wrapper-follow {
+  display: flex;
+  justify-content: space-around;
+}
+
+.follow-container {
+  width: 100%;
+  height: 390px;
+  background-image: url('../../../assets/img_woloxer.png');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.woloxers-container {
+  justify-content: center;
+  display: flex;
+}
+
+.follow-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.follow-img {
+  width: 32px;
+  height: 32px;
+  padding: 10px
+}
+
+.follow-us-container {
+  display: flex;
+  justify-content: center;
+}
+
+.work-container {
+  width: 100%;
+  background-color: #f2f5fa;
+  font-size: 30px;
+  text-align: center;
+}
+
+.work-text-container {
+  padding: 0px 180px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.wrapper-beneficios {
+  margin-top: 80px;
+}
+
+.beneficios-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.item:nth-of-type(5) img {
+  height: 75px;
+  margin-top: 15px;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-top: 12px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+hr.custom {
+  border-top: 2px solid #bbbbbb85;
+  border-radius: 5px;
+  margin: 80px 0;
+  box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.35);
+}
+
+.wrapper-requirements {
+  display: flex;
+  justify-content: space-around;
+}
+
+.requirement-text {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.requirement-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.wrapper-know-more {
+  height: 350px;
+  background-image: url('../../../assets/landing-page/Bg_Footer.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.knowMore-btn {
+  color: #FFF;
+  font-weight: bold;
+  padding: 10px;
+  background-color: #359dcb;
+  border-radius: 20px;
+  padding: 10px 60px;
+  border: 2px solid #359dcb;
+  font-size: 16px;
+  box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.2);
+
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  background-image: url('../../../assets/landing-page/Bg_Footer.png');
+}
+
+.logo-sm {
+  display: flex;
+  text-indent: -9999px;
+  width: 100px;
+  height: 82px;
+  background: url(../../../assets/landing-page/Ic_Wolox_Footer.svg);
+  background-size: 100px 82px;
+}
+
+
+@media (max-width: 960px) {
+
+  .wraper-inicio{
+    margin: 6rem 0;
+  }
+
+  .logo{
+    width: 120px;
+    height: 150px;
+    background-size: 120px 150px;
+  }
+  img {
+    width: auto;
+    max-width: 100%;
+  }
+
+  section {
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  section+section {
+    margin-bottom: 2rem;
+  }
+
+  .technologies-container {
+    width: 100%;
+  }
+
+  .text-container,
+  .work-text-container {
+    display: flex;
+    align-items: center;
+    padding: unset;
+    width: auto;
+    min-height: 150px;
+    margin: 0 auto;
+  }
+
+  .beneficios-container {
+    flex-direction: column;
+  }
+
+  .beneficios-container .item {
+    margin-bottom: 2rem;
+  }
+
+  .requirement-container {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .inicio-img-container,
+  .technologies-img {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .nav {
+    display: none;
+  }
+  
+  .nav,
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 25px 0;
+  }
+  
+  .nav-items .nav-link {
+    margin-top: .8rem;
+  }
+
+}
+
+@media (max-width: 426px) {
+
+  .follow-container {
+    width: 100%;
+    height: 260px;
+  }
+}
+
+@media (max-width: 321px) {
+
+  .logo{
+    width: 90px;
+    height: 150px;
+    background-size: 90px 150px;
+  }
+
+  .follow-container {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+
+
