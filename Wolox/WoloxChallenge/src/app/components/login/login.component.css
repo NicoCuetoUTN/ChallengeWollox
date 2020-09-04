@@ -153,6 +153,7 @@
     margin: 0 30px;
     background: url(../../../assets/landing-page/logo_full_color.svg);
     background-size: 200px 100px;
+    cursor: pointer;
   }
   
   .container-login100 {
