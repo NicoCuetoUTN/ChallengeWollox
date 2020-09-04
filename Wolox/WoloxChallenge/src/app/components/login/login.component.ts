@@ -11,6 +11,7 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
   rememberMe = false;
+  errors = [];
 
 
   constructor(private userService: UserService) { }
@@ -25,15 +26,16 @@ export class LoginComponent implements OnInit {
   }
 
   private validateCredencials(){
+    this.errors = [];
     let isValid = true;
     // Podriamos validar con Regex para ser mas optimo tambien
     if (!this.email || !this.email.includes('@')) {
-      // this.errors.email = 'USUARIO_VACIO';
+       this.errors['email'] = 'This field is required. The username must be a valid email.';
       isValid = false;
     }
 
     if (!this.password || this.password.length <= 6 ) {
-      // this.errors.password = 'CONTRASEÑA_VACIA';
+      this.errors['password'] = 'This field is required. The password must have at least 6 characters.';
       isValid = false;
     }
 
