@@ -10,28 +10,21 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable()
 export class LoaderService {
   private loadingSource = new BehaviorSubject<boolean>(false);
-  public  isLoading = this.loadingSource.asObservable();
-  private req = 0; // Contador de Requests
+  public isLoading = this.loadingSource.asObservable();
+  private req = 0;
 
-  /**
-   * Muestra el Loader
-   */
   mostrarLoader() {
-    this.req < 0 ?  this.req = 0 : this.req++; // se añade una request.
-    
-    if(this.req === 1){ // si tengo una request loading pasa a true.
+    this.req < 0 ? (this.req = 0) : this.req++;
+    if (this.req === 1) {
       this.loadingSource.next(true);
     }
   }
 
-  /**
-   * Oculta el Loader
-   */
   ocultarLoader() {
-    this.req < 0 ?  this.req = 0 : this.req--; // se resta una request.
+    this.req < 0 ? (this.req = 0) : this.req--;
 
-    if(this.req === 0 && this.loadingSource.value === true){ 
-      this.loadingSource.next(false); // si es la ultima request loading pasa a false y se oculta el loader.
+    if (this.req === 0 && this.loadingSource.value === true) {
+      this.loadingSource.next(false);
     }
   }
 }
