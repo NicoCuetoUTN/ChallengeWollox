@@ -3,16 +3,13 @@ import { BehaviorSubject } from 'rxjs';
 import { CacheService } from './cache.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { LoaderComponent } from '../../components/loader/loader.component';
 import { LoaderService } from './loader.service';
-
 
 @Injectable()
 export class UserService {
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
   public isAuthenticated = this.isAuthenticatedSubject.asObservable();
   private userIsLoggedIn : boolean = false;
-
 
   constructor(private cacheService: CacheService,
               private loaderService: LoaderService,
@@ -22,9 +19,6 @@ export class UserService {
     this.isAuthenticatedSubject.next(this.userIsLoggedIn);;
   }
 
-  /**
-   * Loguea un usuario en el sistema
-   */
   login(email: string, password: string, rememberMe : Boolean) {
     this.loaderService.mostrarLoader();
     const params = new URLSearchParams();
@@ -46,18 +40,4 @@ export class UserService {
   isLoggedIn(){
     return this.cacheService.getCurrentUserToken();
   }
-
-  logout() {
-    // this.removeJwt().then(res => {
-    //   this.isAuthenticatedSubject.next(false);    
-    //   this.router.navigateByUrl('login');      
-    // });
-  }
-
-  // TODO: mover el manejo de errores al SxHttpService
-  private handleError(error: any): Promise<any> {
-    console.error('Ocurrió un error', error);
-    return Promise.reject(error.message || error.json());
-  }
-
 }
